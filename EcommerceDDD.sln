@@ -11,13 +11,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contexts", "Contexts", "{58E74782-B79B-4A4A-817F-D75EEBB7F3DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Domain", "src\BuildingBlocks\BuildingBlocks.Domain\BuildingBlocks.Domain.csproj", "{F92A86F3-F8EB-4475-9990-7D3DC09AC7F1}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F92A86F3-F8EB-4475-9990-7D3DC09AC7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F92A86F3-F8EB-4475-9990-7D3DC09AC7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F92A86F3-F8EB-4475-9990-7D3DC09AC7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F92A86F3-F8EB-4475-9990-7D3DC09AC7F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7F15A919-D997-420E-AB65-962912D34AAA} = {E4A059C9-E8EF-4AD8-A28E-BBDBCD7DD067}
 		{58E74782-B79B-4A4A-817F-D75EEBB7F3DD} = {E4A059C9-E8EF-4AD8-A28E-BBDBCD7DD067}
+		{F92A86F3-F8EB-4475-9990-7D3DC09AC7F1} = {7F15A919-D997-420E-AB65-962912D34AAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66EE3E86-8784-45B5-88DA-7059EFECC46C}
