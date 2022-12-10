@@ -1,10 +1,10 @@
 ﻿namespace BuildingBlocks.Domain
 {
-    public class Aggregate<TKey> : Entity<TKey>, IAggregatRoot
+    public class AggregateRoot<TKey> : Entity<TKey>, IAggregatRoot
     {
         private List<IDomainEvent> _uncommitedEvents;
         public IReadOnlyList<IDomainEvent> UncommitedEvents => _uncommitedEvents.AsReadOnly();
-        public Aggregate()
+        public AggregateRoot()
         {
             _uncommitedEvents = new List<IDomainEvent>();
         }
