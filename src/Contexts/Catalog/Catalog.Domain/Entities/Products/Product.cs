@@ -1,6 +1,6 @@
 ﻿using BuildingBlocks.Domain;
 
-namespace Catalog.Domain.Entities
+namespace Catalog.Domain.Entities.Products
 {
     public class Product : AggregateRoot<int>
     {
