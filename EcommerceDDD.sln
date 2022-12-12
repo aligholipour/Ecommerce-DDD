@@ -33,11 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Infrastructure", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{5C6C0706-6A20-45F0-92B9-04863704A84D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.Domain", "src\Contexts\Basket\Basket.Domain\Basket.Domain.csproj", "{6142C569-1704-40F0-AC02-3D751AAE7E3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.Domain", "src\Contexts\Basket\Basket.Domain\Basket.Domain.csproj", "{6142C569-1704-40F0-AC02-3D751AAE7E3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.Application", "src\Contexts\Basket\Basket.Application\Basket.Application.csproj", "{B5363B93-34E0-4727-86D2-C34CA2F4B800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.Application", "src\Contexts\Basket\Basket.Application\Basket.Application.csproj", "{B5363B93-34E0-4727-86D2-C34CA2F4B800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.Infrastructure", "src\Contexts\Basket\Basket.Infrastructure\Basket.Infrastructure.csproj", "{7321BC11-2C1B-404F-9314-F5CD32F231BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.Infrastructure", "src\Contexts\Basket\Basket.Infrastructure\Basket.Infrastructure.csproj", "{7321BC11-2C1B-404F-9314-F5CD32F231BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
