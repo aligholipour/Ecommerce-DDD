@@ -10,7 +10,7 @@ namespace Basket.Application.ShoppingCarditems.UseCases.Commands
 {
     public class CreateShoppingCardItemCommand : IRequest<int>
     {
-        public readonly ShoppingCardItemCreateDto shoppingCardItem;
+        public ShoppingCardItemCreateDto shoppingCardItem { get; private set; }
 
         public CreateShoppingCardItemCommand(ShoppingCardItemCreateDto shoppingCardItem)
         {
