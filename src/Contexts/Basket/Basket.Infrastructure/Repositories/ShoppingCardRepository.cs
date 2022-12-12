@@ -1,6 +1,6 @@
 ﻿using Basket.Domain.Contracts;
-using Basket.Domain.Entities;
-using Basket.Infrastructure.Shared;
+using Basket.Domain.Entities.ShoppingCardItems;
+using Basket.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Basket.Infrastructure.Repositories
 {
-    public class ShoppingCardRepository : IShoppingCardRepository
+    public class ShoppingCardRepository : IShoppingCardItemRepository
     {
         private readonly ShoppingDbContext dbContext;
 

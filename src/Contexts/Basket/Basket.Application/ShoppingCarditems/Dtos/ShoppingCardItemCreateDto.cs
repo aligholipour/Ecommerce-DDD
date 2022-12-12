@@ -1,14 +1,12 @@
-﻿using BuildingBlocks.Domain;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Basket.Domain.Entities
+namespace Basket.Application.ShoppingCarditems.Dtos
 {
-    public class ShoppingCardItem:Entity<int>
+    public class ShoppingCardItemCreateDto
     {
         public string UserID { get; set; }
         public string ProductID { get; set; }
