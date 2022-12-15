@@ -12,3 +12,6 @@ A practical Ecommerce project with Domain-Driven Design, CQRS, and Clean Archite
 | Catalog  | In Progress :hourglass: |
 | Basket  | In Progress :hourglass: |
 | Order  | In Progress :hourglass: |
+
+# :ledger:Libraries
+:heavy_plus_sign: `AutoMapper` A convention-based object-object mapper in .NET.
