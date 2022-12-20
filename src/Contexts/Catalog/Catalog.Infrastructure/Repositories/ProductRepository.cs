@@ -11,6 +11,11 @@ namespace Catalog.Infrastructure.Repositories
             _context = context;
         }
 
+        public async Task<Product> GetProductAsync(int productId)
+        {
+            return await _context.Products.FindAsync(productId);
+        }
+
         public async Task AddProductAsync(Product product)
         {
             await _context.AddAsync(product);

@@ -4,6 +4,7 @@ namespace Catalog.Infrastructure.Repositories
 {
     public interface IProductRepository
     {
+        Task<Product> GetProductAsync(int productId);
         Task AddProductAsync(Product product);
     }
 }
