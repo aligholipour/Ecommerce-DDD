@@ -6,5 +6,6 @@ namespace Catalog.Infrastructure.Repositories
     {
         Task<Product> GetProductAsync(int productId);
         Task AddProductAsync(Product product);
+        Task UpdateProductAsync(Product product);
     }
 }

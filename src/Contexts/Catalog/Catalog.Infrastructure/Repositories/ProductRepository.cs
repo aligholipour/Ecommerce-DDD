@@ -21,5 +21,11 @@ namespace Catalog.Infrastructure.Repositories
             await _context.AddAsync(product);
             await _context.SaveChangesAsync();
         }
+
+        public async Task UpdateProductAsync(Product product)
+        {
+            _context.Update(product);
+            await _context.SaveChangesAsync();
+        }
     }
 }
