@@ -1,4 +1,5 @@
-﻿using BuildingBlocks.Core.Events;
+﻿using Basket.Domain.Entities.ShoppingCardItems;
+using BuildingBlocks.Core.Events;
 
 namespace Basket.Application.ShoppingCarditems.Events.IntegrationEvent
 {
@@ -6,7 +7,6 @@ namespace Basket.Application.ShoppingCarditems.Events.IntegrationEvent
     {
         public Guid EventId => Guid.NewGuid();
         public DateTime PublishDateTime => DateTime.Now;
-        public string UserId { get; set; }
-        public string ProductId { get; set; }
+        public ShoppingCardItem ShoppingCardItem { get; set; }
     }
 }
