@@ -2,7 +2,7 @@
 
 namespace Basket.Domain.Contracts
 {
-    public interface IShoppingCardItemRepository
+    public interface IShoppingCartRepository
     {
         Task AddAsync(ShoppingCardItem cardItem);
         Task<ShoppingCardItem> GetShoppingCartByUserId(string userId);

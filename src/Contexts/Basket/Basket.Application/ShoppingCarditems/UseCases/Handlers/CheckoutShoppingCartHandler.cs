@@ -7,10 +7,10 @@ namespace Basket.Application.ShoppingCarditems.UseCases.Handlers
 {
     public class CheckoutShoppingCartHandler : IRequestHandler<CheckoutShoppingCartCommand, bool>
     {
-        private readonly IShoppingCardItemRepository _shoppingCardItemRepository;
+        private readonly IShoppingCartRepository _shoppingCardItemRepository;
         private readonly IPublisher _publisher;
 
-        public CheckoutShoppingCartHandler(IShoppingCardItemRepository shoppingCardItemRepository, IPublisher publisher)
+        public CheckoutShoppingCartHandler(IShoppingCartRepository shoppingCardItemRepository, IPublisher publisher)
         {
             _shoppingCardItemRepository = shoppingCardItemRepository;
             _publisher = publisher;

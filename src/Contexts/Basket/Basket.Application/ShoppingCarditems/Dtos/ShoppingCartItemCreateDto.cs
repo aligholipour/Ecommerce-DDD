@@ -1,8 +1,6 @@
-﻿using BuildingBlocks.Domain;
-
-namespace Basket.Domain.Entities.ShoppingCardItems
+﻿namespace Basket.Application.ShoppingCarditems.Dtos
 {
-    public class ShoppingCardItem : AggregateRoot<int>
+    public class ShoppingCartItemCreateDto
     {
         public string UserID { get; set; }
         public string ProductID { get; set; }

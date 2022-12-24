@@ -2,19 +2,14 @@
 using Basket.Domain.Entities.ShoppingCardItems;
 using Basket.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Basket.Infrastructure.Repositories
 {
-    public class ShoppingCardRepository : IShoppingCardItemRepository
+    public class ShoppingCartRepository : IShoppingCartRepository
     {
         private readonly ShoppingDbContext dbContext;
 
-        public ShoppingCardRepository(ShoppingDbContext dbContext)
+        public ShoppingCartRepository(ShoppingDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
