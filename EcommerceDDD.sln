@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.Application", "src\C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.Infrastructure", "src\Contexts\Basket\Basket.Infrastructure\Basket.Infrastructure.csproj", "{7321BC11-2C1B-404F-9314-F5CD32F231BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.MassTransit", "src\BuildingBlocks\BuildingBlocks.MassTransit\BuildingBlocks.MassTransit.csproj", "{E7D4C127-B740-4788-885A-B6FBB91ADCB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.MassTransit", "src\BuildingBlocks\BuildingBlocks.MassTransit\BuildingBlocks.MassTransit.csproj", "{E7D4C127-B740-4788-885A-B6FBB91ADCB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.OutboxProcessor", "src\BuildingBlocks\BuildingBlocks.OutboxProcessor\BuildingBlocks.OutboxProcessor.csproj", "{A6316333-758D-4F74-B62A-880CD26C70DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{E7D4C127-B740-4788-885A-B6FBB91ADCB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7D4C127-B740-4788-885A-B6FBB91ADCB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7D4C127-B740-4788-885A-B6FBB91ADCB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6316333-758D-4F74-B62A-880CD26C70DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6316333-758D-4F74-B62A-880CD26C70DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6316333-758D-4F74-B62A-880CD26C70DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6316333-758D-4F74-B62A-880CD26C70DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +123,7 @@ Global
 		{B5363B93-34E0-4727-86D2-C34CA2F4B800} = {5C6C0706-6A20-45F0-92B9-04863704A84D}
 		{7321BC11-2C1B-404F-9314-F5CD32F231BF} = {5C6C0706-6A20-45F0-92B9-04863704A84D}
 		{E7D4C127-B740-4788-885A-B6FBB91ADCB9} = {7F15A919-D997-420E-AB65-962912D34AAA}
+		{A6316333-758D-4F74-B62A-880CD26C70DB} = {7F15A919-D997-420E-AB65-962912D34AAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66EE3E86-8784-45B5-88DA-7059EFECC46C}
