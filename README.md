@@ -3,7 +3,8 @@ A practical Ecommerce project with Domain-Driven Design, CQRS, and Clean Archite
 
 # Features
 :white_check_mark: Using `Clean Architecture` <br />
-:white_check_mark: Using `CQRS (Command Query Responsibility Segregation)` implementation with MediatR library.
+:white_check_mark: Using `CQRS (Command Query Responsibility Segregation)` implementation with MediatR library.<br />
+:white_check_mark: Using `Inbox Pattern` for handling Idempotency on the receiver side.
 
 # Plan
 
