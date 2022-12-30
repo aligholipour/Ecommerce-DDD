@@ -16,4 +16,5 @@ A practical Ecommerce project with Domain-Driven Design, CQRS, and Clean Archite
 
 # :ledger:Libraries
 :heavy_plus_sign: `AutoMapper` A convention-based object-object mapper in .NET. <br />
-:heavy_plus_sign: `MediatR` Simple, unambitious mediator implementation in .NET.
+:heavy_plus_sign: `MediatR` Simple, unambitious mediator implementation in .NET. <br />
+:heavy_plus_sign: `MassTransit`, Distributed Application Framework for .NET.
