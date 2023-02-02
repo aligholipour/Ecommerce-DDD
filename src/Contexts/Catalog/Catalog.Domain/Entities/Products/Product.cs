@@ -17,5 +17,13 @@ namespace Catalog.Domain.Entities.Products
 
             Price = price;
         }
+
+        public void ChangeQuantity(int quantity)
+        {
+            if (quantity < 0)
+                throw new InvalidProductQuantityException("Product quantity must be zero or greater than");
+
+            Quantity = quantity;
+        }
     }
 }
