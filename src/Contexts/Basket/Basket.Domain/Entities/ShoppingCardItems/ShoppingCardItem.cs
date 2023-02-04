@@ -7,5 +7,12 @@ namespace Basket.Domain.Entities.ShoppingCardItems
         public string UserID { get; set; }
         public string ProductID { get; set; }
         public decimal Amount { get; set; }
+
+        public void AddItemToShoppingCard(string userId, string productId, decimal amount)
+        {
+            UserID = userId;
+            ProductID = productId;
+            Amount = amount;
+        }
     }
 }
