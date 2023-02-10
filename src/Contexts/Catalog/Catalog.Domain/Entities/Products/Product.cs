@@ -10,6 +10,20 @@ namespace Catalog.Domain.Entities.Products
         public decimal Price { get; set; }
         public int Quantity { get; set; }
 
+        public Product(string name, string description, decimal price, int quantity)
+        {
+            if (price <= 0)
+                throw new InvalidPriceValueException("The price is less than zero");
+
+            if (quantity < 0)
+                throw new InvalidProductQuantityException("Product quantity must be zero or greater than");
+
+            Name = name;
+            Description = description; 
+            Price = price;
+            Quantity = quantity;
+        }
+
         public void ChangePrice(decimal price)
         {
             if (price <= 0)
