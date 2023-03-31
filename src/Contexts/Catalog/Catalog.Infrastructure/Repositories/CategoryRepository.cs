@@ -17,5 +17,10 @@ namespace Catalog.Infrastructure.Repositories
             await _context.AddAsync(category);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<Category> GetCategoryById(int categoryId)
+        {
+            return await _context.Categorys.FindAsync(categoryId);
+        } 
     }
 }
