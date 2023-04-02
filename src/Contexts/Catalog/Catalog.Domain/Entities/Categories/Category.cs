@@ -7,5 +7,10 @@ namespace Catalog.Domain.Entities.Categories
         public string Name { get; set; }
         public int ParentCategoryId { get; set; }
         public bool Published { get; set; }
+
+        public void ChangePublishState(bool categoryState)
+        {
+            Published = categoryState;
+        }
     }
 }
