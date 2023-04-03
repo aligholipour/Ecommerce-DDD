@@ -6,5 +6,6 @@ namespace Catalog.Domain.Entities.Categories
     {
         Task AddProductAsync(Category category);
         Task<Category> GetCategoryById(int categoryId);
+        Task DeleteCategoryById(Category category);
     }
 }

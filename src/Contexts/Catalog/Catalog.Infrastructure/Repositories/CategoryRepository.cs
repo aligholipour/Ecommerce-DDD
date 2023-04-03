@@ -23,9 +23,10 @@ namespace Catalog.Infrastructure.Repositories
             return await _context.Categorys.FindAsync(categoryId);
         }
 
-        public void DeleteCategoryById(Category category)
+        public async Task DeleteCategoryById(Category category)
         {
             _context.Categorys.Remove(category);
+            await _context.SaveChangesAsync();
         }
     }
 }
