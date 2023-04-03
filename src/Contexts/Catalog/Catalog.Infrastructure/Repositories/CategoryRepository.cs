@@ -21,6 +21,11 @@ namespace Catalog.Infrastructure.Repositories
         public async Task<Category> GetCategoryById(int categoryId)
         {
             return await _context.Categorys.FindAsync(categoryId);
-        } 
+        }
+
+        public void DeleteCategoryById(Category category)
+        {
+            _context.Categorys.Remove(category);
+        }
     }
 }
