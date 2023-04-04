@@ -14,5 +14,7 @@ namespace Catalog.Domain.Entities.Categories
         }
 
         public bool IsPublished() => Published;
+
+        public bool HasParentCategory => ParentCategoryId != 0;
     }
 }
