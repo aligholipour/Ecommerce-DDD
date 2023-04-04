@@ -12,5 +12,7 @@ namespace Catalog.Domain.Entities.Categories
         {
             Published = categoryState;
         }
+
+        public bool IsPublished() => Published;
     }
 }
