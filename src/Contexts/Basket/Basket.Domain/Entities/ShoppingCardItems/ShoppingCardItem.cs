@@ -15,5 +15,10 @@ namespace Basket.Domain.Entities.ShoppingCardItems
             ProductID = productId;
             Amount = amount;
         }
+
+        public void AddQuantity(int quantity)
+        {
+            Quantity += quantity;
+        }
     }
 }
