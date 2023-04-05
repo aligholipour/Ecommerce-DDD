@@ -40,5 +40,10 @@ namespace Catalog.Domain.Entities.Products
 
             Quantity = quantity;
         }
+
+        public void SetCategory(int categoryId)
+        {
+            CategoryId = categoryId;
+        }
     }
 }
