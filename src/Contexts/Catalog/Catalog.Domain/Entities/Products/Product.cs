@@ -9,6 +9,7 @@ namespace Catalog.Domain.Entities.Products
         public string Description { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
+        public int CategoryId { get; set; }
 
         public Product(string name, string description, decimal price, int quantity)
         {
