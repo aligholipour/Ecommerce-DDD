@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
+using BuildingBlocks.Core.Utils;
 using Catalog.Application.Products.UseCases.Commands;
 using Catalog.Infrastructure.Repositories;
 using MediatR;
 
 namespace Catalog.Application.Products.UseCases.Handlers
 {
-    public class EditProductCommandHandler : IRequestHandler<EditProductCommand, bool>
+    public class EditProductCommandHandler : IRequestHandler<EditProductCommand, Result>
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
@@ -16,17 +17,17 @@ namespace Catalog.Application.Products.UseCases.Handlers
             _mapper = mapper;
         }
 
-        public async Task<bool> Handle(EditProductCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(EditProductCommand request, CancellationToken cancellationToken)
         {
             var getProduct = await _productRepository.GetProductAsync(request.EditProductDto.ProductId);
             if (getProduct is null)
-                return false;
+                return Result.Failure("Product not found");
 
             var updateProduct = _mapper.Map(request, getProduct);
 
             await _productRepository.UpdateProductAsync(updateProduct);
 
-            return true;
+            return Result.Success();
         }
     }
 }
