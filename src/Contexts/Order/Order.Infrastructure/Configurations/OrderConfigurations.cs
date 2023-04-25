@@ -9,7 +9,7 @@ namespace Order.Infrastructure.Configurations
         {
             builder.Property<DateTime>("_orderDate")
                 .UsePropertyAccessMode(PropertyAccessMode.Field)
-                .HasField("OrderDate")
+                .HasColumnName("OrderDate")
                 .IsRequired();
 
             builder.OwnsOne(o => o.Address, a =>
