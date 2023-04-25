@@ -21,7 +21,6 @@ namespace Order.Domain.Entities.Orders
             ZipCode = zipCode;
         }
 
-
         protected override IEnumerable<object> GetEqualityComponents()
         {
             yield return Street;
