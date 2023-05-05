@@ -52,5 +52,27 @@ namespace Catalog.Api.Controllers
 
             return BadRequest();
         }
+
+        [HttpPut("EditProduct")]
+        public async Task<IActionResult> EditProduct(EditProductModel productModel)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var productCommand = new EditProductCommand(new EditProductDto
+            {
+                Name = productModel.Name,
+                Description = productModel.Description,
+                Price = productModel.Price,
+                Quantity = productModel.Quantity
+            });
+
+            var result = await _mediator.Send(productCommand);
+
+            if (result.IsSuccess)
+                return NoContent();
+
+            return BadRequest();
+        }
     }
 }
