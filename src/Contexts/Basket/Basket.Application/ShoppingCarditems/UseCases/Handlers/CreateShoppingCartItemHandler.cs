@@ -2,11 +2,12 @@
 using Basket.Application.ShoppingCarditems.UseCases.Commands;
 using Basket.Domain.Contracts;
 using Basket.Domain.Entities.ShoppingCardItems;
+using BuildingBlocks.Core.Utils;
 using MediatR;
 
 namespace Basket.Application.ShoppingCarditems.UseCases.Handlers
 {
-    public class CreateShoppingCartItemHandler : IRequestHandler<CreateShoppingCartItemCommand, int>
+    public class CreateShoppingCartItemHandler : IRequestHandler<CreateShoppingCartItemCommand, Result>
     {
         private readonly IShoppingCartRepository shoppingCardItemRepository;
         private readonly IMapper mapper;
@@ -17,7 +18,7 @@ namespace Basket.Application.ShoppingCarditems.UseCases.Handlers
             this.mapper = mapper;
         }
 
-        public async Task<int> Handle(CreateShoppingCartItemCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(CreateShoppingCartItemCommand request, CancellationToken cancellationToken)
         {
             var entity = mapper.Map<ShoppingCardItem>(request.shoppingCardItem);
 
@@ -25,7 +26,7 @@ namespace Basket.Application.ShoppingCarditems.UseCases.Handlers
 
             //TODO Add new shopping card item event
 
-            return entity.Id;
+            return Result.Success();
         }
     }
 }
