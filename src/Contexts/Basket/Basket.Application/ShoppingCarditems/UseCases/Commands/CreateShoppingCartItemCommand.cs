@@ -1,14 +1,10 @@
 ﻿using Basket.Application.ShoppingCarditems.Dtos;
+using BuildingBlocks.Core.Utils;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Basket.Application.ShoppingCarditems.UseCases.Commands
 {
-    public class CreateShoppingCartItemCommand : IRequest<int>
+    public class CreateShoppingCartItemCommand : IRequest<Result>
     {
         public ShoppingCartItemCreateDto shoppingCardItem { get; private set; }
 
