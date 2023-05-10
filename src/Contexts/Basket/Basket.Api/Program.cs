@@ -1,6 +1,8 @@
+using Basket.Application.ShoppingCarditems.UseCases.Commands;
 using Basket.Domain.Contracts;
 using Basket.Infrastructure.Data;
 using Basket.Infrastructure.Repositories;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSqlServer<ShoppingDbContext>(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
+
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddMediatR(typeof(CreateShoppingCartItemCommand));
 
 var app = builder.Build();
 
