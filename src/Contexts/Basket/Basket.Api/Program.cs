@@ -1,4 +1,5 @@
 using Basket.Domain.Contracts;
+using Basket.Infrastructure.Data;
 using Basket.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSqlServer<ShoppingDbContext>(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
 
