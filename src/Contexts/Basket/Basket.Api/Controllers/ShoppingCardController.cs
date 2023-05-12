@@ -37,5 +37,26 @@ namespace Basket.Api.Controllers
 
             return BadRequest();
         }
+
+        [HttpPost("CheckoutShoppingCart")]
+        public async Task<ActionResult> CheckoutShoppingCart(CheckoutShoppingCartModel checkoutShoppingCartModel)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var checkoutShoppingCartcommand = new CheckoutShoppingCartCommand(new CheckoutShoppingCartDto
+            {
+                Amount = checkoutShoppingCartModel.Amount,
+                ProductID = checkoutShoppingCartModel.ProductID,
+                UserID = checkoutShoppingCartModel.UserID
+            });
+
+            var result = await _mediator.Send(checkoutShoppingCartcommand);
+
+            if (result.IsSuccess)
+                return Ok();
+
+            return BadRequest();
+        }
     }
 }
