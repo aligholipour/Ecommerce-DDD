@@ -1,5 +1,17 @@
 {
   "Routes": [
-
+    {
+      //Product
+      "DownstreamPathTemplate": "/Product/GetProduct/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7153
+        }
+      ],
+      "UpstreamPathTemplate": "/GetProduct/{id}",
+      "UpstreamHttpMethod": [ "get" ]
+    }
   ]
 }
