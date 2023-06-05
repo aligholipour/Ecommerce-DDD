@@ -12,6 +12,19 @@
       ],
       "UpstreamPathTemplate": "/GetProduct/{id}",
       "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      //Product
+      "DownstreamPathTemplate": "/Product/InsertProduct",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7153
+        }
+      ],
+      "UpstreamPathTemplate": "/InsertProduct",
+      "UpstreamHttpMethod": [ "post" ]
     }
   ]
 }
