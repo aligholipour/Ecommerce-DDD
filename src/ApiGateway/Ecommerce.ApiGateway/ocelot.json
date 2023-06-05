@@ -25,6 +25,19 @@
       ],
       "UpstreamPathTemplate": "/InsertProduct",
       "UpstreamHttpMethod": [ "post" ]
+    },
+    {
+      //Product
+      "DownstreamPathTemplate": "/Product/EditProduct",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7153
+        }
+      ],
+      "UpstreamPathTemplate": "/EditProduct",
+      "UpstreamHttpMethod": [ "post" ]
     }
   ]
 }
