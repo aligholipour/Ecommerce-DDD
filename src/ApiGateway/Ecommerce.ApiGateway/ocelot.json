@@ -38,6 +38,19 @@
       ],
       "UpstreamPathTemplate": "/EditProduct",
       "UpstreamHttpMethod": [ "post" ]
+    },
+    {
+      //ShoppingCart
+      "DownstreamPathTemplate": "/ShoppingCard/AddShoppingCarItem",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7185
+        }
+      ],
+      "UpstreamPathTemplate": "/AddShoppingCarItem",
+      "UpstreamHttpMethod": [ "post" ]
     }
   ]
 }
