@@ -7,6 +7,8 @@ namespace Order.Domain.Entities.Orders
         private DateTime _orderDate;
         public Address Address { get; private set; }
 
+        public ICollection<OrderItem> OrderItems { get; set; }
+
         public Order(Address address)
         {
             _orderDate = DateTime.UtcNow;
